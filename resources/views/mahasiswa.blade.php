@@ -81,6 +81,13 @@
                 <div class="title m-b-md">
                     Mahasiswa
                 </div>
+                <div class="link">
+                    <?php echo $nim." - ".$name." - ".$address; ?>
+                    <br/>
+                    Hobby : <?php foreach ($hobby as $key => $value): ?>
+                        <?php echo $value." "; ?>
+                    <?php endforeach ?>
+                </div>
             </div>
         </div>
     </body>

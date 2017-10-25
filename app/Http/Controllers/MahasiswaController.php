@@ -13,7 +13,11 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        return view('mahasiswa');
+        $data['nim'] = '1301144385';
+        $data['name'] = 'Kurniawan Handito';
+        $data['address'] = 'Bandung';
+        $data['hobby'] = array('Riding', 'Basketball');
+        return view('mahasiswa', $data);
     }
 
     /**
