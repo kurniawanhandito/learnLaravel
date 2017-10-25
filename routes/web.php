@@ -11,12 +11,20 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-// Route::get('/mahasiswa', function () {
-//     return view('mahasiswa');
-// });
+Route::get('/mahasiswa', function () {
+    return view('mahasiswa');
+});
+ 
+Route::get('/mahasiswa/{id}', function ($id) {
+    return 'Mahasiswa'.$id;
+});
 
-Route::resource('mahasiswa','MahasiswaController');
+Route::get('/post/{post}/comment/{comment}', function ($post,$comment) {
+    echo "Post : ".$post;
+    echo "</br>";
+    echo "Comment : ".$comment;
+});
