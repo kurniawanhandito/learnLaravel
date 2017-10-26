@@ -33,9 +33,11 @@ Route::get('user/{name?}', function ($name = 'John') {
     return $name;
 });
 
-Route::get('/user/age/{age}', function(){
-	return "You have permission";
-})->middleware('age');
+Route::group(['middleware' => ['age']], function () {
+	Route::get('/user/age/{age}', function(){
+		return "You have permission";
+	}); 
+});
 
 Route::get('/home', function(){
 	return "You don't have permission";
