@@ -28,3 +28,15 @@ Route::get('/post/{post}/comment/{comment}', function ($post,$comment) {
     echo "</br>";
     echo "Comment : ".$comment;
 });
+
+Route::get('user/{name?}', function ($name = 'John') {
+    return $name;
+});
+
+Route::get('/user/age/{age}', function(){
+	return "You have permission";
+})->middleware('age');
+
+Route::get('/home', function(){
+	return "You don't have permission";
+});
