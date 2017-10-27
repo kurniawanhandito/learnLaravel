@@ -25,6 +25,14 @@ Route::get('/greeting', function () {
 	}
 });
 
+Route::get('/admin', function () {
+	if (View::exists('admin.dashboard')) {
+	    return view('admin.dashboard', ['name' => 'Handito']);
+	} else{
+		return "no view created";
+	}
+});
+
 Route::get('/mahasiswa', function () {
     return view('mahasiswa');
 });
