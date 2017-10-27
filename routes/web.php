@@ -11,8 +11,18 @@
 |
 */
 
+use Illuminate\Support\Facades\View;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/greeting', function () {
+	if (View::exists('greeting')) {
+	    return view('greeting', ['name' => 'Handito']);
+	} else{
+		return "no view created";
+	}
 });
 
 Route::get('/mahasiswa', function () {
