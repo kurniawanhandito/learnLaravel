@@ -34,7 +34,8 @@ Route::get('/admin', function () {
 });
 
 Route::get('/mahasiswa', function () {
-    return view('mahasiswa');
+	$name = 'Handito';
+    return view('mahasiswa')->with('name', $name);
 });
  
 Route::get('/mahasiswa/{id}', function ($id) {

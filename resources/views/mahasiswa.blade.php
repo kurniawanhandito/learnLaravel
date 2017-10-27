@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Mahasiswa
+                    Halo, {{ $name }}
                 </div>
             </div>
         </div>
