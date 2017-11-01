@@ -61,3 +61,7 @@ Route::group(['middleware' => ['age']], function () {
 Route::get('/home', function(){
 	return "You don't have permission";
 });
+
+Route::get('blade', function () {
+    return view('child');
+});
